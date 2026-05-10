@@ -21,6 +21,8 @@
 - Spring projects: `@SpringBootTest` with scoped context
 - `@Nested` test classes for logical grouping
 - Coverage target: core business ≥ 80%
+- Before declaring work complete, run lint, type check, tests, and production build.
+- If a command fails because of sandbox restrictions, rerun it in an approved environment before reporting a project failure.
 
 ## Git Commit Convention
 
@@ -36,6 +38,7 @@
 - Subject ≤ 72 chars, imperative mood ("add" not "added")
 - Scope by module: `feat(auth):`
 - Breaking Change: footer with `BREAKING CHANGE:`
+- Do not commit generated artifacts or local tool state such as `target/`, `node_modules/`, `tsconfig.tsbuildinfo`, `.idea/`, or `.claude/`.
 
 ## Build Commands
 
