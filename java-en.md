@@ -15,8 +15,14 @@
 - Spring Boot: use `application.yml`, no hardcoded values
 
 ## Testing Strategy
+Strictly follow the TDD red-green-refactor cycle for every change:
 
-- Test first, when new features added, start from writing a test
+1. **Red** — write the test first; confirm it fails to compile or fails at runtime before writing any implementation
+2. **Green** — write the minimal implementation to make the test pass
+3. **Refactor** — clean up without breaking the test
+
+Rules:
+- Never write implementation code before its test exists
 - Framework: `JUnit 5` + `Mockito`
 - Spring projects: `@SpringBootTest` with scoped context
 - `@Nested` test classes for logical grouping

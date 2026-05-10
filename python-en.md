@@ -16,7 +16,14 @@
 - Entry script: `if __name__ == "__main__":`
 
 ## Testing Strategy
-- Test first, when new features added, start from writing a test
+Strictly follow the TDD red-green-refactor cycle for every change:
+
+1. **Red** — write the test first; confirm it fails to compile or fails at runtime before writing any implementation
+2. **Green** — write the minimal implementation to make the test pass
+3. **Refactor** — clean up without breaking the test
+
+Rules:
+- Never write implementation code before its test exists
 - Framework: `pytest` + `pytest-asyncio`
 - Mock: `unittest.mock`, patch depth ≤ 2 layers
 - Fixtures: `@pytest.fixture(scope="session")` for expensive resources
